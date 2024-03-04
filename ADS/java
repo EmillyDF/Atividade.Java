@@ -1,0 +1,54 @@
+public class Pessoa {
+    private String nome;
+    private String sobrenome;
+    private String dataNascimento;
+    private String email;
+    private String telefone;
+
+    public Pessoa(String nome, String sobrenome, String dataNascimento, String email, String telefone) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.dataNascimento = dataNascimento;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
+    public void andar() {
+        System.out.println("A pessoa está andando.");
+    }
+
+    public void comer() {
+        System.out.println("A pessoa está comendo.");
+    }
+
+    public void correr() {
+        System.out.println("A pessoa está correndo.");
+    }
+
+    public void dormir() {
+        System.out.println("A pessoa está dormindo.");
+    }
+
+    private static final String CPF = "000.000.000-00";
+    private static final String PAIS_NACIONALIDADE = "Brasil";
+
+    public void exibirInformacoes() {
+        System.out.println("Nome completo: " + nome + " " + sobrenome);
+        System.out.println("Email: " + email);
+        System.out.println("Data de nascimento: " + dataNascimento);
+        System.out.println("Telefone: " + telefone);
+        System.out.println("CPF: " + CPF);
+        System.out.println("País de nacionalidade: " + PAIS_NACIONALIDADE);
+    }
+
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Lucas", "Ryan", "00/00/0000", "lucasryan@email.com", "(00) 00000-0000");
+       
+        pessoa.andar();
+        pessoa.comer();
+        pessoa.correr();
+        pessoa.dormir();
+
+        pessoa.exibirInformacoes();
+    }
+}
